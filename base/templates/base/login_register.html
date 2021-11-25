@@ -4,15 +4,15 @@
 
 {% if page == 'login'%}
 <div>
-    <form method ="POST" action="">
+    <form method="POST" action="">
         {% csrf_token %}
-        <label>Username:</label>        
-        <input type='text' name='username' placeholder='Enter Username'/>
-        
-        <label>Password:</label>        
-        <input type='password' name='password' placeholder='Enter Password'/>
-        
-        <input type='submit' value='Login'/>
+        <label>Username:</label>
+        <input type='text' name='username' placeholder='Enter Username' />
+
+        <label>Password:</label>
+        <input type='password' name='password' placeholder='Enter Password' />
+
+        <input type='submit' value='Login' />
     </form>
 
     <p>Do not have an account?</p>
@@ -22,10 +22,10 @@
 
 {% if page == 'register' %}
 <div>
-    <form method ="POST" action="">
+    <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type='submit' value='Register'/>
+        <input type='submit' value='Register' />
     </form>
 
     <p>Already have an account?</p>
