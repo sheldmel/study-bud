@@ -31,17 +31,6 @@ html {
   font-size: 56.25%;
 }
 
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 62.5%;
-  }
-}
-
-@media only screen and (min-width: 2100px) {
-  html {
-    font-size: 75%;
-  }
-}
 
 body {
   line-height: 1.6;
@@ -255,12 +244,6 @@ a {
   gap: 1rem;
 }
 
-@media screen and (min-width: 500px) {
-  .mobile-menu {
-    display: none;
-  }
-}
-
 /*==============================
 =>  Header Section
 ================================*/
@@ -315,33 +298,6 @@ a {
   border: none;
   outline: none;
   color: var(--color-light);
-}
-
-@media screen and (max-width: 800px) {
-  .header__search input {
-    width: 20rem;
-  }
-
-  .header > .container {
-    gap: 3rem;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .header__logo h1 {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .header__search {
-    display: none;
-  }
-}
-
-.header__menu {
-  margin-left: auto;
-  position: relative;
 }
 
 .header__menu a {
@@ -461,17 +417,6 @@ a {
 
 .layout__body {
   margin: 3rem;
-}
-
-@media screen and (max-width: 900px) {
-  .activities,
-  .topics {
-    display: none;
-  }
-
-  .layout--3 > .container > div:nth-child(2) {
-    flex-basis: 100%;
-  }
 }
 
 /*==============================
@@ -606,13 +551,6 @@ a {
 
 .topics-page .header__search {
   display: block;
-}
-
-@media screen and (max-width: 500px) {
-  .mobile-menu .header__search {
-    display: block;
-    margin-bottom: 2.4rem;
-  }
 }
 
 /*==============================
@@ -907,16 +845,6 @@ a {
   position: relative;
 }
 
-@media screen and (max-width: 900px) {
-  .participants {
-    display: none;
-  }
-
-  .layout--2 > .container > div:first-child {
-    flex-basis: 100%;
-  }
-}
-
 .room__top,
 .participants__top {
   background: var(--color-dark-light);
@@ -975,29 +903,12 @@ a {
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 500px) {
-  .room__header {
-    top: 4.3rem;
-    padding-right: 2rem;
-  }
-}
-
 .room__box {
   padding-left: 2rem;
   padding-right: 2rem;
   height: 80.5vh;
   /* overflow-y: auto; */
   padding-bottom: 0;
-}
-
-@media screen and (max-width: 500px) {
-  .room__box {
-    padding-left: 2.5rem;
-    padding-right: 2rem;
-    height: 80.5vh;
-    overflow-y: auto;
-    padding-bottom: 0;
-  }
 }
 
 .room__info {
@@ -1162,4 +1073,95 @@ a {
   font-weight: 500;
   color: var(--color-main);
   font-weight: 1.4rem;
+}
+
+
+@media all and (min-width: 500px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (min-width: 2100px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .room__header {
+    top: 4.3rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header__search input {
+    width: 20rem;
+  }
+
+  .header > .container {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header__logo h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .participants {
+    display: none;
+  }
+
+  .layout--2 > .container > div:first-child {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .room__box {
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+    height: 80.5vh;
+    overflow-y: auto;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .activities,
+  .topics {
+    display: none;
+  }
+
+  .layout--3 > .container > div:nth-child(2) {
+    flex-basis: 100%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .mobile-menu .header__search {
+    display: block;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.header__menu {
+  margin-left: auto;
+  position: relative;
 }
