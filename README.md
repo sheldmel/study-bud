@@ -10,5 +10,6 @@ studybud is an app that allows users to create study rooms or join an existing s
 * Django
 * HTML
 * CSS
+* JavaScript
 * Django-Models
 * Django-rest-framework
