@@ -122,9 +122,9 @@
             <h3 class="participants__top">Participants <span>({{participants.count}})</span></h3>
             <div class="participants__list scroll">
                 {% for p in participants %}
-                <a href="{% url 'user-profile' user.id %}" class="participant">
+                <a href="{% url 'user-profile' p.id %}" class="participant">
                     <div class="avatar avatar--medium">
-                        <img src="{{user.avatar.url}}" />
+                        <img src="{{p.avatar.url}}" />
                     </div>
                     <p>
                         {{p.username}}

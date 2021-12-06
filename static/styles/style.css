@@ -1075,6 +1075,14 @@ a {
   font-weight: 1.4rem;
 }
 
+.messages{
+  display:flex;
+  justify-content: center;
+}
+
+.messages li {
+  display: list-item;
+}
 
 @media all and (min-width: 500px) {
   .mobile-menu {

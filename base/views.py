@@ -1,5 +1,6 @@
 from django.db.models import Q
 from django.contrib import messages
+from django.db.models.query import EmptyQuerySet
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
@@ -15,7 +16,7 @@ def loginPage(request):
     if request.method == 'POST':
         email= request.POST.get('email').lower()
         password = request.POST.get('password')
-
+        
         try:
             user = User.objects.get(email=email)
         except:
@@ -40,7 +41,6 @@ def logoutUser(request):
 def registerUser(request):
     page = 'register'
     form = MyUserCreationForm()
-
     if request.method == 'POST':
         form = MyUserCreationForm(request.POST)
         if form.is_valid():
@@ -49,9 +49,14 @@ def registerUser(request):
             user.save()
             login(request, user)
             return redirect('home')
-        else:
-            messages.error(request, 'An error occured. Please try again')
-            
+        if User.objects.filter(username=request.POST.get('username').lower()).exists():
+            messages.error(request, 'Username already Taken. Please choose a different username')
+        if User.objects.filter(email=request.POST.get('email').lower()).exists():
+            messages.error(request, 'Email already in use. Please choose a different email')    
+        if request.POST.get('password1') != request.POST.get('password2'):
+            messages.error(request, 'Passwords do not match.')
+        else: 
+            messages.error(request, 'Password must contain atleast one capital letter, one digit,one special character and must be atleast 8 charachters long')
     data = {'page':page, 'form':form}
     return render(request,'base/login_register.html', data)
 
