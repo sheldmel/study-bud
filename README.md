@@ -1,4 +1,4 @@
-# View deployed application at https://sheltondmello-study-bud.herokuapp.com/
+# Study Bud
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -13,3 +13,6 @@ studybud is an app that allows users to create study rooms or join an existing s
 * JavaScript
 * Django-Models
 * Django-rest-framework
+
+## View Deployed Application
+https://sheltondmello-study-bud.herokuapp.com/
