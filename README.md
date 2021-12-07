@@ -1,4 +1,4 @@
-# study-bud
+# View deployed application at https://sheltondmello-study-bud.herokuapp.com/
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
